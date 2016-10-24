@@ -1,0 +1,12 @@
+<% if flash && flash[:errors] %>
+	<%= flash[:errors] %>
+<% end %>
+
+<h1>Login</h1>
+<form action="/login" method="post">
+	<input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+	<p>Email:<input type="text" name="email"></p>
+	<p>Password:<input type="text" name="password"></p>
+	<input type="submit" value="Login">
+	<a href="/online_lending/register">Click here to register</a>
+</form>

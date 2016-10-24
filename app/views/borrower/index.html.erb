@@ -1,0 +1,23 @@
+<p>Name: <%=@borrower.fname%> <%=@borrower.lname%></p>
+<p>Amount Need: <%=@borrower.aneeded%></p>
+<p>Amount Raised: <%=@borrower.araised%></p>
+
+<h1>List of people who lend you money:</h1>
+<table>
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>Email</th>
+			<th>Amount Lent</th>
+		</tr>
+	</thead>
+	<tbody>
+	
+		<% @trans.each do |trans| %>
+			<td><%=trans.amount%></td>
+	
+		<% end %>
+		</tr>
+	</tbody>
+</table>
+

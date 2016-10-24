@@ -1,0 +1,33 @@
+<% if flash && flash[:errors] %>
+	<%= flash[:errors] %>
+<% end %>
+
+<h1>Lender</h1>
+<form action="/lenders" method="post">
+	<input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+	<p>First Name:<input type="text" name="fname"></p>
+	<p>Last Name:<input type="text" name="lname"></p>
+	<p>Email:<input type="text" name="email"></p>
+	<p>Password:<input type="text" name="password"></p>
+	<p>Password confirmation:<input type-="text" name="password_confirmation"></p>
+	<p>Amount:<input type="number" name="balance"></p>
+	<input type="submit" value="Register">
+	<a href="/online_lending/login">Already a member?</a>
+</form>
+
+<h1>Borrower</h1>
+<form action="/borrowers" method="post">
+	<input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+	<p>First Name:<input type="text" name="fname"></p>
+	<p>Last Name:<input type="text" name="lname"></p>
+	<p>Email:<input type="text" name="email"></p>
+	<p>Password:<input type="text" name="password"></p>
+	<p>Password:<input type="text" name="password_confirmation"></p>
+	<p>Need Money For:<input type="text" name="purpose"></p>
+	<p>Description:<input type="text" name="description"></p>
+	<p>Amount Needed:<input type="number" name="aneeded"></p>
+	<input type="submit" value="Register">
+	<a href="/online_lending/login">Already a member?</a>
+</form>
+
+
